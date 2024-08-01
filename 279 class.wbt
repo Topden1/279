@@ -1,0 +1,42 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BlanketFabric.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.025967095023158325 0.06266420204285639 0.9976968015175703 0.7874316967211116
+  position -2.421073963324517 -5.583280635927551 1.8349577955120175
+}
+Transform {
+  translation 5 0 -0.04
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.621333 0.9 0.9
+        roughness 0.2
+      }
+      geometry Plane {
+        size 5 5
+      }
+    }
+    Shape {
+      appearance BlanketFabric {
+      }
+      geometry Capsule {
+        radius 0.5
+      }
+    }
+  ]
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 5 5
+  floorTileSize 1 1
+}
